@@ -1,0 +1,1 @@
+{"name":"bubble-blast-adventure","private":true,"scripts":{"dev":"npm --prefix client run dev","build":"npm --prefix client run build","server":"npm --prefix server run dev"}}

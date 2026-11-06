@@ -1,0 +1,4 @@
+export const COLORS=['#ff5e8a','#5b9cff','#50e3b1','#ffcb52','#ae77ff','#ff975a'];
+const types=['clear_all','score','drop','color_hunt','clear_all','score','drop'];
+export function levelFor(id){const n=Math.max(1,Number(id)||1),difficulty=Math.min(5,Math.floor((n-1)/8)),cols=Math.min(6,3+Math.floor((n-1)/8));let seed=n*7919;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};const rows=Math.min(9,3+Math.floor((n-1)/7));const board=Array.from({length:rows},(_,r)=>Array.from({length:8-(r%2)},()=>rand()<.12+Math.min(.15,difficulty*.025)?null:Math.floor(rand()*cols)));return {id:n,difficulty,shots:Math.max(15,26-difficulty*2),colors:cols,board,objective:types[(n-1)%types.length],targetScore:300+n*35,starThresholds:[300+n*35,600+n*45,900+n*55]};}
+export const LEVELS=Array.from({length:40},(_,i)=>levelFor(i+1));
