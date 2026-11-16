@@ -1,0 +1,10 @@
+{
+  "name": "BUBBLE BLAST ADVENTURE",
+  "short_name": "Bubble Blast",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d2a5c",
+  "theme_color": "#0d2a5c",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
